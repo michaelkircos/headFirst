@@ -3,13 +3,10 @@ plist = list(phrase)
 print(phrase)
 print(plist)
 
-plist.pop(0)    ## Removes the 'D'
-for p in range(9)
-    plist.pop(2)    ## Removes everything to the right of 'on'
-plist.extend(' ')
-plist.extend('t')
-plist.extend('a')
-plist.extend('p')    
+plist = plist[1:8]
+plist.pop(2)
+plist.insert(2, plist.pop(3))
+plist.extend([plist.pop(), plist.pop()])
 
 
 new_phrase = ''.join(plist)
